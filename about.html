@@ -68,19 +68,19 @@
     /* ABOUT HERO */
     .about-hero { max-width: 1220px; margin: 0 auto; padding: 88px 24px 100px; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
 
+    .portrait-wrap { position: sticky; top: 100px; }
     .portrait {
-      background:
-        linear-gradient(145deg, rgba(16,27,34,0.06), rgba(16,27,34,0.5)),
-        url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=80') center/cover;
-      border: 1px solid var(--line); border-radius: 36px;
-      min-height: 520px; display: flex; align-items: flex-end;
-      color: #fff; padding: 34px;
-      box-shadow: 0 26px 70px rgba(16,27,34,0.13);
-      position: sticky; top: 100px;
+      background: url('Facilitator.jpg') center top/cover;
+      border: 1px solid var(--line); border-radius: 36px 36px 0 0;
+      min-height: 520px;
     }
-    .portrait-caption { background: rgba(16,27,34,0.55); backdrop-filter: blur(8px); border-radius: 18px; padding: 20px 24px; width: 100%; }
-    .portrait-caption strong { display: block; font-family: Georgia, serif; font-size: 1.3rem; margin-bottom: 4px; }
-    .portrait-caption span { font-family: Arial, sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.72); font-weight: 400; letter-spacing: 0; }
+    .portrait-caption {
+      background: rgba(255,253,248,0.97); border: 1px solid var(--line);
+      border-top: none; border-radius: 0 0 36px 36px;
+      padding: 20px 28px; box-shadow: 0 26px 70px rgba(16,27,34,0.13);
+    }
+    .portrait-caption strong { display: block; font-family: Georgia, serif; font-size: 1.2rem; margin-bottom: 4px; color: var(--ink); }
+    .portrait-caption span { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--muted); font-weight: 400; letter-spacing: 0; }
 
     .about-content { display: flex; flex-direction: column; gap: 56px; }
     .lead { font-size: 1.2rem; color: var(--ink); line-height: 1.6; max-width: 640px; margin-bottom: 20px; font-family: Georgia, 'Times New Roman', serif; letter-spacing: -0.02em; }
@@ -187,14 +187,14 @@
   <header>
     <div class="nav-outer" id="navOuter">
       <div class="nav">
-        <a class="brand-wrap" href="tba-index.html">
+        <a class="brand-wrap" href="index.html">
           <span class="brand">Travis Birch & Associates</span>
           <span class="brand-sub">Management Consulting · Stratford, Ontario</span>
         </a>
         <nav class="nav-links">
-          <a href="tba-index.html">Home</a>
-          <a href="tba-services.html">Services</a>
-          <a href="tba-about.html" class="active">About</a>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html" class="active">About</a>
           <a href="https://transitionlab.ca">Leadership Continuity Lab ↗</a>
           <a class="button" href="https://www.tbagroup.io/contact">Get in touch</a>
         </nav>
@@ -204,9 +204,9 @@
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="tba-index.html">Home</a>
-      <a href="tba-services.html">Services</a>
-      <a href="tba-about.html">About</a>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
       <a href="https://transitionlab.ca">Leadership Continuity Lab ↗</a>
       <a class="button" href="https://www.tbagroup.io/contact">Get in touch</a>
     </div>
@@ -215,7 +215,8 @@
   <main>
 
     <div class="about-hero">
-      <div class="portrait fade-up">
+      <div class="portrait-wrap fade-up">
+        <div class="portrait"></div>
         <div class="portrait-caption">
           <strong>Travis Birch</strong>
           <span>Founder & Principal · Travis Birch & Associates</span>
@@ -364,7 +365,7 @@
         <p>If your organization is experiencing delivery drag, leadership pressure, or structural inefficiency — let's talk about what's actually happening.</p>
         <div class="cta-buttons">
           <a class="button" href="https://www.tbagroup.io/contact">Get in touch</a>
-          <a class="button ghost" href="tba-services.html">Explore services</a>
+          <a class="button ghost" href="services.html">Explore services</a>
         </div>
       </div>
     </div>
@@ -379,14 +380,14 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="tba-services.html">Consulting</a>
-        <a href="tba-services.html">Assessment</a>
-        <a href="tba-services.html">Engagement Design</a>
-        <a href="tba-services.html">Training</a>
+        <a href="services.html">Consulting</a>
+        <a href="services.html">Assessment</a>
+        <a href="services.html">Engagement Design</a>
+        <a href="services.html">Training</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="tba-about.html">About Travis</a>
+        <a href="about.html">About Travis</a>
         <a href="https://www.tbagroup.io/contact">Contact</a>
         <a href="https://transitionlab.ca">Leadership Continuity Lab ↗</a>
       </div>
