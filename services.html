@@ -126,7 +126,11 @@
         linear-gradient(145deg, rgba(16,27,34,0.1), rgba(16,27,34,0.55)),
         url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80') center/cover;
     }
-    .service-visual::after {
+    .sv-facilitation {
+      background:
+        linear-gradient(145deg, rgba(16,27,34,0.1), rgba(16,27,34,0.55)),
+        url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80') center/cover;
+    }
       content: attr(data-label);
       position: absolute; left: 24px; bottom: 24px;
       color: rgba(255,255,255,0.6); font-size: 0.72rem;
@@ -281,7 +285,7 @@
 
     <div class="page-hero fade-up">
       <div class="eyebrow">Services</div>
-      <h1>Five ways TBA helps organizations improve.</h1>
+      <h1>Six ways TBA helps organizations improve.</h1>
       <p>Every engagement starts with understanding what's actually happening. From there, we design the right approach — whether that's a diagnostic, a consulting engagement, a training program, or a full leadership intervention.</p>
     </div>
 
@@ -372,6 +376,24 @@
         </div>
       </div>
 
+      <div class="service-block reverse fade-up" id="facilitation">
+        <div class="service-visual sv-facilitation" data-label="Facilitation"></div>
+        <div>
+          <div class="service-number">06</div>
+          <div class="eyebrow">Facilitation</div>
+          <h2>Structured facilitation for better meetings and workshops.</h2>
+          <p>For leaders who want support facilitating and leading meetings and workshops with multiple collaborators. This is not consulting or coaching — it is focused, expert facilitation of pre-planned, scheduled sessions.</p>
+          <p>With some light preparation for context, Travis designs and leads sessions with clearly defined agendas, inputs, and outputs — ensuring that participants leave aligned and ready to act, not just informed.</p>
+          <p>The Leadership Continuity Lab is a structured example of this approach applied to leadership teams over an 8-week period.</p>
+          <div class="outcome-list">
+            <div class="outcome-item"><i data-lucide="check"></i><span>More structured workshops and meetings with clear agendas</span></div>
+            <div class="outcome-item"><i data-lucide="check"></i><span>Defined inputs and outputs so participants know what to bring and what they'll leave with</span></div>
+            <div class="outcome-item"><i data-lucide="check"></i><span>Alignment and action-oriented outcomes rather than open-ended discussion</span></div>
+          </div>
+          <a class="button" href="contact.html" style="margin-top:26px;">Start a conversation</a>
+        </div>
+      </div>
+
     </section>
 
     <!-- FLAGSHIP -->
@@ -413,6 +435,7 @@
         <a href="services.html#engagement">Engagement Design</a>
         <a href="services.html#training">Training</a>
         <a href="services.html#coaching">Coaching</a>
+        <a href="services.html#facilitation">Facilitation</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
