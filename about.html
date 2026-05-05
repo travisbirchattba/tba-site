@@ -99,7 +99,7 @@
     .portrait-caption strong { display: block; font-family: Georgia, serif; font-size: 1.2rem; margin-bottom: 4px; color: var(--ink); }
     .portrait-caption span { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--muted); font-weight: 400; letter-spacing: 0; }
 
-    .about-content { display: block; } .content-block { margin-bottom: 48px; } .content-block:last-child { margin-bottom: 0; }
+    .about-content { display: block; }
     .lead { font-size: 1.2rem; color: var(--ink); line-height: 1.6; max-width: 640px; margin-bottom: 20px; font-family: Georgia, 'Times New Roman', serif; letter-spacing: -0.02em; }
 
     /* CREDENTIALS */
@@ -234,8 +234,8 @@
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
-      .about-hero { padding-top: 56px; }
-      .portrait-wrap { float: none; width: 100%; margin: 0 0 32px 0; } .portrait { min-height: 360px; }
+      .about-hero { padding-top: 56px; } .portrait-float { float: none; width: 100%; margin: 0 0 32px 0; }
+      
       .credentials-grid, .philosophy-grid { grid-template-columns: 1fr; }
       .flagship { grid-template-columns: 1fr; }
       .flagship-visual { min-height: 260px; }
@@ -318,8 +318,8 @@
   <main>
 
     <div class="about-hero">
-      <div class="about-content" style="overflow:hidden;">
-      <img src="Facilitator.jpg" alt="Travis Birch" style="float:left; width:320px; border-radius:28px; margin:0 48px 32px 0; display:block; box-shadow: 0 26px 70px rgba(16,27,34,0.13);" />
+      <div class="about-content">
+        <img src="Facilitator.jpg" alt="Travis Birch" class="portrait-float" />
 
         <div class="fade-up">
           <div class="eyebrow">About Travis</div>
