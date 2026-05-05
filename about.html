@@ -99,7 +99,7 @@
     .portrait-caption strong { display: block; font-family: Georgia, serif; font-size: 1.2rem; margin-bottom: 4px; color: var(--ink); }
     .portrait-caption span { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--muted); font-weight: 400; letter-spacing: 0; }
 
-    .about-content { display: block; overflow: hidden; }
+    .about-content { display: block; } .content-block { margin-bottom: 48px; } .content-block:last-child { margin-bottom: 0; }
     .lead { font-size: 1.2rem; color: var(--ink); line-height: 1.6; max-width: 640px; margin-bottom: 20px; font-family: Georgia, 'Times New Roman', serif; letter-spacing: -0.02em; }
 
     /* CREDENTIALS */
@@ -318,15 +318,8 @@
   <main>
 
     <div class="about-hero">
-      <div class="portrait-wrap fade-up">
-        <div class="portrait"></div>
-        <div class="portrait-caption">
-          <strong>Travis Birch</strong>
-          <span>Founder & Principal · Travis Birch & Associates</span>
-        </div>
-      </div>
-
-      <div class="about-content">
+      <div class="about-content" style="overflow:hidden;">
+      <img src="Facilitator.jpg" alt="Travis Birch" style="float:left; width:320px; border-radius:28px; margin:0 48px 32px 0; display:block; box-shadow: 0 26px 70px rgba(16,27,34,0.13);" />
 
         <div class="fade-up">
           <div class="eyebrow">About Travis</div>
@@ -336,7 +329,7 @@
           <p>He doesn't arrive with a pre-packaged blueprint. He facilitates the work of the people who know the system best — your leaders — and gives them the tools, the framework, and the neutral space to redesign how work actually flows through their organization.</p>
         </div>
 
-        <hr class="div" />
+        <div style="height:1px;background:var(--line);margin:32px 0;clear:none;"></div>
 
         <div class="fade-up">
           <div class="eyebrow">How this work began</div>
@@ -346,7 +339,7 @@
           <p>Travis Birch & Associates, and its flagship practice the Leadership Continuity Lab, are the product of that recognition.</p>
         </div>
 
-        <hr class="div" />
+        <div style="height:1px;background:var(--line);margin:32px 0;clear:none;"></div>
 
         <div class="fade-up">
           <div class="eyebrow">How Travis works</div>
@@ -375,7 +368,7 @@
           </div>
         </div>
 
-        <hr class="div" />
+        <div style="height:1px;background:var(--line);margin:32px 0;clear:none;"></div>
 
         <div class="fade-up">
           <div class="eyebrow">Credentials & training</div>
@@ -391,7 +384,7 @@
           </div>
         </div>
 
-        <hr class="div" />
+        <div style="height:1px;background:var(--line);margin:32px 0;clear:none;"></div>
 
         <div class="fade-up">
           <div class="eyebrow">Experience</div>
