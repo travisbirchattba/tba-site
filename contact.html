@@ -158,6 +158,19 @@
     .footer-col a:hover { color: var(--ink); }
     .footer-bottom { max-width: 1220px; margin: 0 auto; padding: 18px 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 0.84rem; }
 
+    /* FORM */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 4px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+    .form-group input, .form-group textarea {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px; padding: 13px 16px; color: #fff; font-size: 0.95rem;
+      font-family: Arial, sans-serif; outline: none; transition: border 0.2s, background 0.2s;
+      width: 100%; resize: none;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--clay); background: rgba(255,255,255,0.12); }
+
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
@@ -263,10 +276,6 @@
             <i data-lucide="shield"></i>
             <span>No obligation — if TBA isn't the right fit, we'll say so</span>
           </div>
-          <div class="expect-item">
-            <i data-lucide="map-pin"></i>
-            <span>Working across Canada</span>
-          </div>
         </div>
       </div>
 
@@ -277,7 +286,36 @@
           <p>Book directly into Travis's calendar. No back-and-forth required.</p>
           <a class="button large" href="https://calendar.app.google/msZ3LNy6amMZ7Ljw7" style="background:#fff; color:var(--ink); box-shadow: 0 12px 28px rgba(16,27,34,0.2);">Book a conversation</a>
 
-          <div class="divider-or">or reach out directly</div>
+          <div class="divider-or">or send a message</div>
+
+          <form id="contactForm" class="contact-form">
+            <input type="hidden" name="access_key" value="e893d5a6-ff45-4865-818c-350e1ea401ff" />
+            <input type="hidden" name="subject" value="New message from tbagroup.io" />
+            <input type="hidden" name="from_name" value="TBA Website" />
+            <input type="checkbox" name="botcheck" style="display:none;" />
+
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="organization">Organization</label>
+              <input type="text" id="organization" name="organization" placeholder="Acme Corp" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@acmecorp.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">What's on your mind?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your situation..." required></textarea>
+            </div>
+            <button type="submit" class="button large" id="submitBtn" style="width:100%; justify-content:center; background:#fff; color:var(--ink); box-shadow: 0 12px 28px rgba(16,27,34,0.2);">Send message</button>
+            <div id="formSuccess" style="display:none; text-align:center; padding:16px 0; color:rgba(255,255,255,0.9); font-size:0.95rem;">✓ Message sent — Travis will be in touch shortly.</div>
+            <div id="formError" style="display:none; text-align:center; padding:16px 0; color:#e88; font-size:0.95rem;">Something went wrong. Please try again or email travis@tbagroup.io directly.</div>
+          </form>
+
+          <div class="divider-or" style="margin-top:24px;">or reach out directly</div>
 
           <a class="contact-detail" href="mailto:travis@tbagroup.io">
             <i data-lucide="mail"></i>
@@ -286,11 +324,10 @@
             <i data-lucide="linkedin"></i>
             <span>linkedin.com/in/travisbirch</span>
           </a>
-          <div class="contact-detail">
-            <i data-lucide="map-pin"></i>
-            <span></span>
-          </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 891bd3d7753479c1130a96b1718b2b49f2cdcf56
           <div class="portrait-small">
             <div class="portrait-thumb"></div>
             <div class="portrait-info">
@@ -339,6 +376,34 @@
 
 </div>
 <script>
+  // Contact form
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      const data = new FormData(form);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          btn.textContent = 'Send message';
+          btn.disabled = false;
+          document.getElementById('formError').style.display = 'block';
+        }
+      } catch {
+        btn.textContent = 'Send message';
+        btn.disabled = false;
+        document.getElementById('formError').style.display = 'block';
+      }
+    });
+  }
+
   lucide.createIcons();
   const navOuter = document.getElementById('navOuter');
   window.addEventListener('scroll', () => { navOuter.classList.toggle('scrolled', window.scrollY > 20); });
@@ -352,3 +417,4 @@
 </script>
 </body>
 </html>
+ 
