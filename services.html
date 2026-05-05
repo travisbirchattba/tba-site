@@ -49,7 +49,7 @@
     .nav { max-width: 1220px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
     .brand-wrap { display: flex; flex-direction: row; align-items: center; gap: 12px; }
     .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 1.25rem; letter-spacing: -0.03em; font-weight: 600; }
-    .brand-sub { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; padding-left: 14px; border-left: 1px solid var(--line); }
+    .brand-sub { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; } .brand-sep { width: 1px; height: 16px; background: var(--line); margin: 0 16px; flex: 0 0 auto; }
     .nav-links { display: flex; align-items: center; gap: 26px; color: var(--muted); font-size: 0.92rem; }
     .nav-links a:not(.button):hover { color: var(--ink); transition: color 0.2s; }
     .nav-links a.active { color: var(--ink); font-weight: 600; }
@@ -291,27 +291,10 @@
 
     <section class="section" style="padding-top:0;">
 
-      <div class="service-block fade-up" id="consulting">
-        <div class="service-visual sv-consulting" data-label="Consulting"></div>
-        <div>
-          <div class="service-number">01</div>
-          <div class="eyebrow">Consulting</div>
-          <h2>Expert guidance for improving your organization.</h2>
-          <p>Every organization can benefit from the perspective of well-intentioned and capable external support. We help you explore possibilities, identify opportunities, select the best options, and design the best approach for your next steps.</p>
-          <p>We don't arrive with a pre-packaged solution. We start by understanding what's actually happening — and build from there.</p>
-          <div class="outcome-list">
-            <div class="outcome-item"><i data-lucide="check"></i><span>Rapid diagnosis of structural bottlenecks</span></div>
-            <div class="outcome-item"><i data-lucide="check"></i><span>Clear, prioritized improvement options</span></div>
-            <div class="outcome-item"><i data-lucide="check"></i><span>Practical implementation support</span></div>
-          </div>
-          <a class="button" href="contact.html" style="margin-top:26px;">Start a conversation</a>
-        </div>
-      </div>
-
-      <div class="service-block reverse fade-up" id="assessment">
+      <div class="service-block fade-up" id="assessment">
         <div class="service-visual sv-assessment" data-label="Assessment"></div>
         <div>
-          <div class="service-number">02</div>
+          <div class="service-number">01</div>
           <div class="eyebrow">Assessment</div>
           <h2>Understand your organization's current state.</h2>
           <p>You know your organization best. You and your leadership team are the most qualified people to assess the health and fitness of your business. What you need is a framework to facilitate the assessment process.</p>
@@ -320,6 +303,23 @@
             <div class="outcome-item"><i data-lucide="check"></i><span>Clear view of where work is getting stuck</span></div>
             <div class="outcome-item"><i data-lucide="check"></i><span>Root causes behind delays and pressure</span></div>
             <div class="outcome-item"><i data-lucide="check"></i><span>A practical, prioritized improvement plan</span></div>
+          </div>
+          <a class="button" href="contact.html" style="margin-top:26px;">Start a conversation</a>
+        </div>
+      </div>
+
+      <div class="service-block reverse fade-up" id="consulting">
+        <div class="service-visual sv-consulting" data-label="Consulting"></div>
+        <div>
+          <div class="service-number">02</div>
+          <div class="eyebrow">Consulting</div>
+          <h2>Expert guidance for improving your organization.</h2>
+          <p>Every organization can benefit from the perspective of well-intentioned and capable external support. We help you explore possibilities, identify opportunities, select the best options, and design the best approach for your next steps.</p>
+          <p>We don't arrive with a pre-packaged solution. We start by understanding what's actually happening — and build from there.</p>
+          <div class="outcome-list">
+            <div class="outcome-item"><i data-lucide="check"></i><span>Rapid diagnosis of structural bottlenecks</span></div>
+            <div class="outcome-item"><i data-lucide="check"></i><span>Clear, prioritized improvement options</span></div>
+            <div class="outcome-item"><i data-lucide="check"></i><span>Practical implementation support</span></div>
           </div>
           <a class="button" href="contact.html" style="margin-top:26px;">Start a conversation</a>
         </div>
@@ -430,8 +430,8 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="services.html#consulting">Consulting</a>
         <a href="services.html#assessment">Assessment</a>
+        <a href="services.html#consulting">Consulting</a>
         <a href="services.html#engagement">Engagement Design</a>
         <a href="services.html#training">Training</a>
         <a href="services.html#coaching">Coaching</a>

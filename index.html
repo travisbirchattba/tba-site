@@ -70,7 +70,7 @@
       font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.25rem; letter-spacing: -0.03em; font-weight: 600;
     }
-    .brand-sub { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; padding-left: 14px; border-left: 1px solid var(--line); }
+    .brand-sub { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; } .brand-sep { width: 1px; height: 16px; background: var(--line); margin: 0 16px; flex: 0 0 auto; }
     .nav-links { display: flex; align-items: center; gap: 26px; color: var(--muted); font-size: 0.92rem; }
     .nav-links a:not(.button):hover { color: var(--ink); transition: color 0.2s; }
     .nav-links a.active { color: var(--ink); font-weight: 600; }
@@ -446,16 +446,16 @@
 
       <div class="services-grid">
         <div class="service-card fade-up">
-          <div class="service-icon"><i data-lucide="search"></i></div>
-          <h3>Consulting</h3>
-          <p>Expert guidance for improving your organization. We help you explore possibilities, identify opportunities, select the best options, and design the right next steps.</p>
-          <a class="service-link" href="services.html#consulting">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
-        </div>
-        <div class="service-card fade-up" style="transition-delay:0.1s">
           <div class="service-icon"><i data-lucide="clipboard-list"></i></div>
           <h3>Assessment</h3>
           <p>A safe, effective, and expertly facilitated organizational self-assessment so you can make better decisions about whether and how your organization should improve.</p>
           <a class="service-link" href="services.html#assessment">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.1s">
+          <div class="service-icon"><i data-lucide="search"></i></div>
+          <h3>Consulting</h3>
+          <p>Expert guidance for improving your organization. We help you explore possibilities, identify opportunities, select the best options, and design the right next steps.</p>
+          <a class="service-link" href="services.html#consulting">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
         </div>
         <div class="service-card fade-up" style="transition-delay:0.15s">
           <div class="service-icon"><i data-lucide="git-merge"></i></div>
@@ -550,8 +550,8 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="services.html#consulting">Consulting</a>
         <a href="services.html#assessment">Assessment</a>
+        <a href="services.html#consulting">Consulting</a>
         <a href="services.html#engagement">Engagement Design</a>
         <a href="services.html#training">Training</a>
         <a href="services.html#coaching">Coaching</a>
